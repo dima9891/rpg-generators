@@ -93,10 +93,11 @@ const scaryPlace = {
         },
     ]
 }
+function generatePlace(scaryPlace) {
+    const place = random_item(scaryPlace.kind).toLowerCase()
+    const type = random_item(scaryPlace.placeType)
+    const trate1 = getTrate(scaryPlace.trait1)
+    const trate2 = getTrate(scaryPlace.trait2)
 
-const place = random_item(scaryPlace.kind).toLowerCase()
-const type = random_item(scaryPlace.placeType)
-const trate1 = getTrate(scaryPlace.trait1)
-const trate2 = getTrate(scaryPlace.trait2)
-
-document.querySelector('.scary-place').innerHTML = 'Это ' + place + ' место. ' + type + '. ' + trate1 + ' ' + trate2
+    return 'Это ' + place + ' место. ' + type + '. ' + trate1 + ' ' + trate2
+}

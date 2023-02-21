@@ -41,12 +41,13 @@ const character = {
     ]
 }
 
-
-document.querySelector('.character').innerHTML = 'Перед вами ' + random_item(character.constitution).toLowerCase() + ' человек. '
-                            + 'Его лицо ' + random_item(character.face).toLowerCase() + '. '
-                            + 'Кожа  - ' + random_item(character.skin).toLowerCase() + '. '
-                            + 'Волосы его ' + random_item(character.hair).toLowerCase() + '. '
-                            + 'Его одежда  ' + random_item(character.clothes).toLowerCase() + '. '
-                            + 'По характеру он ' + random_item(character.kindness).toLowerCase() + '. '
-                            + 'У него есть порок. Он - ' + random_item(character.vice).toLowerCase() + '. '
-                            + 'В его прошлом кроется несчастье. Дело в том, что он ' + random_item(character.disaster).toLowerCase() + '. '
+function generateCharacter(character) {
+    return 'Перед вами ' + random_item(character.constitution).toLowerCase() + ' человек. '
+    + 'Его лицо ' + random_item(character.face).toLowerCase() + '. '
+    + 'Кожа  - ' + random_item(character.skin).toLowerCase() + '. '
+    + 'Волосы его ' + random_item(character.hair).toLowerCase() + '. '
+    + 'Его одежда  ' + random_item(character.clothes).toLowerCase() + '. '
+    + 'По характеру он ' + random_item(character.kindness).toLowerCase() + '. '
+    + 'У него есть порок. Он - ' + random_item(character.vice).toLowerCase() + '. '
+    + 'В его прошлом кроется несчастье. Дело в том, что он ' + random_item(character.disaster).toLowerCase() + '. '
+}
